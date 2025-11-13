@@ -4,6 +4,7 @@ const authRoute = require("./auth.routes");
 const userRoute = require("./user.routes");
 const docsRoute = require("./docs.routes");
 const aboutRoute = require("./about.route");
+const termsAndCondition = require("./termsAndCondition.route");
 
 
 const router = express.Router();
@@ -20,6 +21,10 @@ const defaultRoutes = [
   {
     path: "/about",
     route: aboutRoute,
+  },
+  {
+    path: "/terms",
+    route: termsAndCondition,
   },
  
 ];
