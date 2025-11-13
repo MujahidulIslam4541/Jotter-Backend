@@ -46,9 +46,7 @@ const userSchema = mongoose.Schema(
       minlength: 8,
       validate(value) {
         if (!value.match(/\d/) || !value.match(/[a-zA-Z]/)) {
-          throw new Error(
-            "Password must contain at least one letter and one number"
-          );
+          throw new Error("Password must contain at least one letter and one number");
         }
       },
       private: true,
@@ -60,37 +58,45 @@ const userSchema = mongoose.Schema(
     callingCode: {
       type: String,
       required: false,
-      default: null
+      default: null,
     },
     phoneNumber: {
       type: Number,
       required: false,
-      default: null
+      default: null,
     },
     nidNumber: {
       type: Number,
       required: false,
-      default: null
+      default: null,
     },
     isNIDVerified: {
       type: Boolean,
       default: false,
-      default: null
+      default: null,
+    },
+    storageLimit: {
+      type: Number,
+      default: 15 * 1024 * 1024 * 1024, // 15GB
+    },
+    usedStorage: {
+      type: Number,
+      default: 0,
     },
     dataOfBirth: {
       type: Date,
       required: false,
-      default: null
+      default: null,
     },
     address: {
       type: String,
       required: false,
-      default: null
+      default: null,
     },
     oneTimeCode: {
       type: String,
       required: false,
-      default: null
+      default: null,
     },
     isEmailVerified: {
       type: Boolean,
@@ -104,14 +110,15 @@ const userSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    fcmToken: { // onlly use for firebase push notification / mobile focus*
+    fcmToken: {
+      // onlly use for firebase push notification / mobile focus*
       type: String,
       required: false,
       default: null,
     },
     isDeleted: {
       type: Boolean,
-      default: false
+      default: false,
     },
 
     securitySettings: {
@@ -157,10 +164,7 @@ userSchema.statics.isEmailTaken = async function (email, excludeUserId) {
   const user = await this.findOne({ email, _id: { $ne: excludeUserId } });
   return !!user;
 };
-userSchema.statics.isPhoneNumberTaken = async function (
-  phoneNumber,
-  excludeUserId
-) {
+userSchema.statics.isPhoneNumberTaken = async function (phoneNumber, excludeUserId) {
   const user = await this.findOne({ phoneNumber, _id: { $ne: excludeUserId } });
   return !!user;
 };
