@@ -1,4 +1,4 @@
-const { Storage } = require("../models");
+const Storage = require("../models/storage.model");
 
 // Create folder/file/note
 const createStorage = async (data) => {
@@ -25,21 +25,34 @@ const deleteStorage = async (id) => {
   return Storage.findByIdAndDelete(id);
 };
 
-// Folder tree (nested)
+// Folder tree (Google Drive style)
 const getFolderTree = async (userId, parentId = null) => {
-  const folders = await Storage.find({ createdBy: userId, parentId, type: "folder" }).lean();
-  for (let folder of folders) {
-    folder.children = await getFolderTree(userId, folder._id);
+  const items = await Storage.find({
+    createdBy: userId,
+    parentId,
+    isDeleted: false,
+  }).lean();
+
+  for (let item of items) {
+    if (item.type === "folder") {
+      item.children = await getFolderTree(userId, item._id);
+    }
   }
-  return folders;
+
+  return items;
 };
 
 // Calculate total used storage by user
 const getUserStorageUsage = async (userId) => {
   const files = await Storage.find({ createdBy: userId, type: "file" });
   const used = files.reduce((acc, file) => acc + (file.fileSize || 0), 0);
-  const limit = 15 * 1024 * 1024 * 1024; // 15 GB in bytes
-  return { used, remaining: limit - used, limit };
+  const limit = 15 * 1024 * 1024 * 1024; // 15GB in bytes
+
+  return {
+    used,
+    remaining: limit - used,
+    limit,
+  };
 };
 
 module.exports = {

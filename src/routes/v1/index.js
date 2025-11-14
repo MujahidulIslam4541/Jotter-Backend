@@ -5,6 +5,7 @@ const userRoute = require("./user.routes");
 const docsRoute = require("./docs.routes");
 const aboutRoute = require("./about.route");
 const termsAndCondition = require("./termsAndCondition.route");
+const storageRoute =require("./storage.route")
 
 
 const router = express.Router();
@@ -25,6 +26,10 @@ const defaultRoutes = [
   {
     path: "/terms",
     route: termsAndCondition,
+  },
+  {
+    path: "/storage",
+    route: storageRoute,
   },
  
 ];

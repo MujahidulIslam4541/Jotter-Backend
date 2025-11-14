@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const auth = require("../../middlewares/auth");
 const storageController = require("../../controllers/storage.controller");
-const upload = require("../../middlewares/fileUpload")(process.env.UPLOADS_FOLDER);
+const upload = require("../../middlewares/fileUpload")("public/uploads");
+
 
 // File / Folder / Note Create
 router.post("/", auth(), upload.single("file"), storageController.createStorage);
