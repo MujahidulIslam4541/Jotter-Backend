@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ff91bb07-dafb-49e1-9cdf-8685ae658fa9",
-		"name": "Backend initial setup",
+		"_postman_id": "ecea3c9c-4f8a-4988-8395-f071f313bc38",
+		"name": "jottor-backend",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "39147714",
-		"_collection_link": "https://nexnotag.postman.co/workspace/backend-initial-setup~f604dc4e-171c-435b-9cb1-2e20fd14ee41/collection/39147714-ff91bb07-dafb-49e1-9cdf-8685ae658fa9?action=share&source=collection_link&creator=39147714"
+		"_exporter_id": "40183302"
 	},
 	"item": [
 		{
@@ -1840,6 +1839,1621 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"code\": 400,\n    \"message\": \"Incorrect password\",\n    \"stack\": \"Error: Incorrect password\\n    at Object.deleteMe (D:\\\\Md. Shadat Hossain\\\\Backend Tamplat\\\\src\\\\services\\\\auth.service.js:146:11)\\n    at async D:\\\\Md. Shadat Hossain\\\\Backend Tamplat\\\\src\\\\controllers\\\\auth.controller.js:192:16\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "aboutUs",
+					"item": [
+						{
+							"name": "createAbout",
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\"content\":\"xfddgdgtdfsdbhgfhjthtrfghbtdgfbfdgfdvgfsdfdfdfdddfddsfdsfsdfsdfdd\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/about/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"about",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "267"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10b-IKvUM1BkVUc7yH/tVMkX1k4XNYs\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 14:55:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 201,\n    \"message\": \"About Us created successfully\",\n    \"data\": {\n        \"attributes\": {\n            \"content\": \"xfddgdgtdfsdbhgfhjthtrfghbtdgfbfdgfdvgfsdfdfdfdddfddsfdsfsdfsdfdd\",\n            \"_id\": \"6915f1790f2f57444e235dbc\",\n            \"createdAt\": \"2025-11-13T14:55:53.324Z\",\n            \"updatedAt\": \"2025-11-13T14:55:53.324Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "updateAboutUs",
+							"request": {
+								"method": "PUT",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"content\":\"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of \"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/about/6915f1790f2f57444e235dbc",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"about",
+												"6915f1790f2f57444e235dbc"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "304"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"130-QUR8TmGHWzK0+ARSUVb19bSwtVQ\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 14:57:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"About Us updated successfully\",\n    \"data\": {\n        \"attributes\": {\n            \"_id\": \"6915f1790f2f57444e235dbc\",\n            \"content\": \"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of \",\n            \"createdAt\": \"2025-11-13T14:55:53.324Z\",\n            \"updatedAt\": \"2025-11-13T14:57:47.459Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "allAboutUs",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/about",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"about"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "497"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1f1-QPoEPLgU0vuzfrHyuVuWHH2OwTo\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 14:59:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"About Us fetched successfully\",\n    \"data\": {\n        \"attributes\": [\n            {\n                \"_id\": \"6915f1fd0f2f57444e235dc2\",\n                \"content\": \"xfddgdgtdfsdbhgfhjthtrfghbtdgfbfdgfdvgfsdfdfdfdddfddsfdsfsdfsdfdd\",\n                \"createdAt\": \"2025-11-13T14:58:05.569Z\",\n                \"updatedAt\": \"2025-11-13T14:58:05.569Z\"\n            },\n            {\n                \"_id\": \"6915f1790f2f57444e235dbc\",\n                \"content\": \"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of \",\n                \"createdAt\": \"2025-11-13T14:55:53.324Z\",\n                \"updatedAt\": \"2025-11-13T14:57:47.459Z\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteAbout",
+							"request": {
+								"method": "DELETE",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/about/6915f1fd0f2f57444e235dc2",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"about",
+												"6915f1fd0f2f57444e235dc2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "79"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4f-5sh1EFSCLQuI5hwUy9WRIwd4MmQ\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 15:00:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"About Us deleted successfully\",\n    \"data\": {\n        \"attributes\": []\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "terms",
+					"item": [
+						{
+							"name": "createTerms",
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"content\":\"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of \"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/terms/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"terms",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "301"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"12d-GehzOiHh4G3Fv/U+dkJshCfv3eM\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 15:32:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 201,\n    \"message\": \"Terms created successfully\",\n    \"data\": {\n        \"attributes\": {\n            \"content\": \"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of \",\n            \"_id\": \"6915fa0f930b0cc9c5430d18\",\n            \"createdAt\": \"2025-11-13T15:32:31.564Z\",\n            \"updatedAt\": \"2025-11-13T15:32:31.564Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "updateTerms",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\":\"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of language\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/terms/6915fa0f930b0cc9c5430d18",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"terms",
+										"6915fa0f930b0cc9c5430d18"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"content\":\"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of language\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/terms/6915fa0f930b0cc9c5430d18",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"terms",
+												"6915fa0f930b0cc9c5430d18"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "309"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"135-5RG+9dR1++ZONitWlIzvcC0qRmo\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 15:34:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Terms updated successfully\",\n    \"data\": {\n        \"attributes\": {\n            \"_id\": \"6915fa0f930b0cc9c5430d18\",\n            \"content\": \"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of language\",\n            \"createdAt\": \"2025-11-13T15:32:31.564Z\",\n            \"updatedAt\": \"2025-11-13T15:34:59.782Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getAllTerms",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/terms",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"terms"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "311"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"137-Ur7OY5mEpGiJzu02X6dPcfQutJ8\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 15:36:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Terms fetched successfully\",\n    \"data\": {\n        \"attributes\": [\n            {\n                \"_id\": \"6915fa0f930b0cc9c5430d18\",\n                \"content\": \"a word or phrase used to describe a thing or to express a concept, especially in a particular kind of language\",\n                \"createdAt\": \"2025-11-13T15:32:31.564Z\",\n                \"updatedAt\": \"2025-11-13T15:34:59.782Z\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteTerms",
+							"request": {
+								"method": "DELETE",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/terms/6915fb2eaf5372379682a45e",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"terms",
+												"6915fb2eaf5372379682a45e"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "76"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4c-OgtjnU+M2VTLfRZiAOWhi24e+oI\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 13 Nov 2025 15:37:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Terms deleted successfully\",\n    \"data\": {\n        \"attributes\": []\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Folder",
+					"item": [
+						{
+							"name": "createFolder",
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"type\": \"folder\",\r\n  \"name\": \"My Documents\",\r\n  \"parentId\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/storage",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"storage"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "385"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"181-WgPtY4fUyLFGSKNCRV3eOZsW5+o\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Nov 2025 14:23:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Item created successfully\",\n    \"data\": {\n        \"attributes\": {\n            \"type\": \"folder\",\n            \"name\": \"My Documents\",\n            \"createdBy\": \"6915f0c1d715b8624fa98553\",\n            \"parentId\": null,\n            \"filePath\": null,\n            \"fileType\": null,\n            \"fileSize\": 0,\n            \"content\": null,\n            \"isDeleted\": false,\n            \"_id\": \"69173b7a7d16983feb88f178\",\n            \"createdAt\": \"2025-11-14T14:23:54.920Z\",\n            \"updatedAt\": \"2025-11-14T14:23:54.920Z\",\n            \"__v\": 0,\n            \"id\": \"69173b7a7d16983feb88f178\"\n        }\n    }\n}"
+								},
+								{
+									"name": "imageUploadSuccess",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/PEACEFULL WORLD/Downloads/Time Flies (Desktop wallpaper) (1).png"
+												},
+												{
+													"key": "type",
+													"value": "file",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "myFirstImage",
+													"type": "text"
+												}
+											],
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/storage",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"storage"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "454"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1c6-P+YXssdGsB2hrOl89m3G2i8h5ZY\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Nov 2025 16:51:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Item created successfully\",\n    \"data\": {\n        \"attributes\": {\n            \"type\": \"file\",\n            \"name\": \"myFirstImage\",\n            \"createdBy\": \"6915f0c1d715b8624fa98553\",\n            \"parentId\": null,\n            \"filePath\": \"/uploads/time-flies-(desktop-wallpaper)-(1)-1763139095752.png\",\n            \"fileType\": \"image/png\",\n            \"fileSize\": 761215,\n            \"content\": null,\n            \"isDeleted\": false,\n            \"_id\": \"69175e177f7306b9a837b62d\",\n            \"createdAt\": \"2025-11-14T16:51:35.805Z\",\n            \"updatedAt\": \"2025-11-14T16:51:35.805Z\",\n            \"__v\": 0,\n            \"id\": \"69175e177f7306b9a837b62d\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getall",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/storage",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"storage"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"88b-D84dX0YyyNC8I5U7dOOr+gEHTaA\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Nov 2025 16:55:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"All storage items\",\n    \"data\": {\n        \"attributes\": [\n            {\n                \"_id\": \"69175eb37f7306b9a837b631\",\n                \"type\": \"file\",\n                \"name\": \"myFirstImage\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": null,\n                \"filePath\": \"/uploads/group-1-1763139251728.png\",\n                \"fileType\": \"image/png\",\n                \"fileSize\": 2430,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T16:54:11.735Z\",\n                \"updatedAt\": \"2025-11-14T16:54:11.735Z\",\n                \"__v\": 0,\n                \"id\": \"69175eb37f7306b9a837b631\"\n            },\n            {\n                \"_id\": \"69175e177f7306b9a837b62d\",\n                \"type\": \"file\",\n                \"name\": \"myFirstImage\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": null,\n                \"filePath\": \"/uploads/time-flies-(desktop-wallpaper)-(1)-1763139095752.png\",\n                \"fileType\": \"image/png\",\n                \"fileSize\": 761215,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T16:51:35.805Z\",\n                \"updatedAt\": \"2025-11-14T16:51:35.805Z\",\n                \"__v\": 0,\n                \"id\": \"69175e177f7306b9a837b62d\"\n            },\n            {\n                \"_id\": \"69175be67f7306b9a837b620\",\n                \"type\": \"folder\",\n                \"name\": \"My Documents\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": \"69173b7a7d16983feb88f178\",\n                \"filePath\": null,\n                \"fileType\": null,\n                \"fileSize\": 0,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T16:42:14.965Z\",\n                \"updatedAt\": \"2025-11-14T16:42:14.965Z\",\n                \"__v\": 0,\n                \"id\": \"69175be67f7306b9a837b620\"\n            },\n            {\n                \"_id\": \"691749be8d7312c027d381bd\",\n                \"type\": \"folder\",\n                \"name\": \"My Documents\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": \"69173b7a7d16983feb88f178\",\n                \"filePath\": null,\n                \"fileType\": null,\n                \"fileSize\": 0,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T15:24:46.884Z\",\n                \"updatedAt\": \"2025-11-14T15:24:46.884Z\",\n                \"__v\": 0,\n                \"id\": \"691749be8d7312c027d381bd\"\n            },\n            {\n                \"_id\": \"69173be67d16983feb88f17c\",\n                \"type\": \"note\",\n                \"name\": \"My Note\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": \"69173b7a7d16983feb88f178\",\n                \"filePath\": null,\n                \"fileType\": null,\n                \"fileSize\": 0,\n                \"content\": \"This is a note content\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T14:25:42.490Z\",\n                \"updatedAt\": \"2025-11-14T14:25:42.490Z\",\n                \"__v\": 0,\n                \"id\": \"69173be67d16983feb88f17c\"\n            },\n            {\n                \"_id\": \"69173b7a7d16983feb88f178\",\n                \"type\": \"folder\",\n                \"name\": \"My Documents\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": null,\n                \"filePath\": null,\n                \"fileType\": null,\n                \"fileSize\": 0,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T14:23:54.920Z\",\n                \"updatedAt\": \"2025-11-14T14:23:54.920Z\",\n                \"__v\": 0,\n                \"id\": \"69173b7a7d16983feb88f178\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "folderTree",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/storage/tree",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"storage",
+												"tree"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"803-jVMbye3t+BpsWEwcV5NSLxopBrM\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Nov 2025 16:56:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Folder tree fetched successfully\",\n    \"data\": {\n        \"attributes\": [\n            {\n                \"_id\": \"69173b7a7d16983feb88f178\",\n                \"type\": \"folder\",\n                \"name\": \"My Documents\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": null,\n                \"filePath\": null,\n                \"fileType\": null,\n                \"fileSize\": 0,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T14:23:54.920Z\",\n                \"updatedAt\": \"2025-11-14T14:23:54.920Z\",\n                \"__v\": 0,\n                \"children\": [\n                    {\n                        \"_id\": \"69173be67d16983feb88f17c\",\n                        \"type\": \"note\",\n                        \"name\": \"My Note\",\n                        \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                        \"parentId\": \"69173b7a7d16983feb88f178\",\n                        \"filePath\": null,\n                        \"fileType\": null,\n                        \"fileSize\": 0,\n                        \"content\": \"This is a note content\",\n                        \"isDeleted\": false,\n                        \"createdAt\": \"2025-11-14T14:25:42.490Z\",\n                        \"updatedAt\": \"2025-11-14T14:25:42.490Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"691749be8d7312c027d381bd\",\n                        \"type\": \"folder\",\n                        \"name\": \"My Documents\",\n                        \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                        \"parentId\": \"69173b7a7d16983feb88f178\",\n                        \"filePath\": null,\n                        \"fileType\": null,\n                        \"fileSize\": 0,\n                        \"content\": null,\n                        \"isDeleted\": false,\n                        \"createdAt\": \"2025-11-14T15:24:46.884Z\",\n                        \"updatedAt\": \"2025-11-14T15:24:46.884Z\",\n                        \"__v\": 0,\n                        \"children\": []\n                    },\n                    {\n                        \"_id\": \"69175be67f7306b9a837b620\",\n                        \"type\": \"folder\",\n                        \"name\": \"My Documents\",\n                        \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                        \"parentId\": \"69173b7a7d16983feb88f178\",\n                        \"filePath\": null,\n                        \"fileType\": null,\n                        \"fileSize\": 0,\n                        \"content\": null,\n                        \"isDeleted\": false,\n                        \"createdAt\": \"2025-11-14T16:42:14.965Z\",\n                        \"updatedAt\": \"2025-11-14T16:42:14.965Z\",\n                        \"__v\": 0,\n                        \"children\": []\n                    }\n                ]\n            },\n            {\n                \"_id\": \"69175e177f7306b9a837b62d\",\n                \"type\": \"file\",\n                \"name\": \"myFirstImage\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": null,\n                \"filePath\": \"/uploads/time-flies-(desktop-wallpaper)-(1)-1763139095752.png\",\n                \"fileType\": \"image/png\",\n                \"fileSize\": 761215,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T16:51:35.805Z\",\n                \"updatedAt\": \"2025-11-14T16:51:35.805Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"69175eb37f7306b9a837b631\",\n                \"type\": \"file\",\n                \"name\": \"myFirstImage\",\n                \"createdBy\": \"6915f0c1d715b8624fa98553\",\n                \"parentId\": null,\n                \"filePath\": \"/uploads/group-1-1763139251728.png\",\n                \"fileType\": \"image/png\",\n                \"fileSize\": 2430,\n                \"content\": null,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-11-14T16:54:11.735Z\",\n                \"updatedAt\": \"2025-11-14T16:54:11.735Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "usege",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/storage/usage",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"storage",
+												"usage"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "123"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"7b-8vA7EHQEBgQduiU4k8ePolTlHDY\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Nov 2025 17:04:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Storage usage fetched successfully\",\n    \"data\": {\n        \"attributes\": {\n            \"usedGB\": \"0.03\",\n            \"remainingGB\": \"14.97\",\n            \"totalGB\": 15\n        }\n    }\n}"
 								}
 							]
 						}
