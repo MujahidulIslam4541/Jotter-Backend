@@ -1,9 +1,14 @@
 const httpStatus = require("http-status");
 const catchAsync = require("../utils/catchAsync");
 const response = require("../config/response");
-const { createTermsService, updateTerms, deleteTerms, getTerms } = require("../services/termsAndCondition.service");
+const {
+  createTermsService,
+  updateTerms,
+  deleteTerms,
+  getTerms,
+} = require("../services/termsAndCondition.service");
 
-// only admin create
+// Admin Create (Only 1 time allowed)
 const createTerms = catchAsync(async (req, res) => {
   if (req.user.role !== "admin") {
     return res.status(httpStatus.UNAUTHORIZED).json(
@@ -14,18 +19,30 @@ const createTerms = catchAsync(async (req, res) => {
       })
     );
   }
-  const terms = await createTermsService(req.body);
+
+  const created = await createTermsService(req.body);
+
+  if (!created) {
+    return res.status(httpStatus.BAD_REQUEST).json(
+      response({
+        message: "Terms already exists, you can only update",
+        status: "FAIL",
+        statusCode: httpStatus.BAD_REQUEST,
+      })
+    );
+  }
+
   res.status(httpStatus.CREATED).json(
     response({
       message: "Terms created successfully",
       status: "OK",
       statusCode: httpStatus.CREATED,
-      data: terms,
+      data: created,
     })
   );
 });
 
-//  Admin Update
+// Admin Update
 const updateTermsController = catchAsync(async (req, res) => {
   if (req.user.role !== "admin") {
     return res.status(httpStatus.UNAUTHORIZED).json(
@@ -36,7 +53,9 @@ const updateTermsController = catchAsync(async (req, res) => {
       })
     );
   }
+
   const term = await updateTerms(req.params.id, req.body);
+
   if (!term) {
     return res.status(httpStatus.NOT_FOUND).json(
       response({
@@ -46,6 +65,7 @@ const updateTermsController = catchAsync(async (req, res) => {
       })
     );
   }
+
   res.status(httpStatus.OK).json(
     response({
       message: "Terms updated successfully",
@@ -56,7 +76,7 @@ const updateTermsController = catchAsync(async (req, res) => {
   );
 });
 
-//  Admin Delete
+// Admin Delete
 const deleteTermsController = catchAsync(async (req, res) => {
   if (req.user.role !== "admin") {
     return res.status(httpStatus.UNAUTHORIZED).json(
@@ -67,7 +87,9 @@ const deleteTermsController = catchAsync(async (req, res) => {
       })
     );
   }
+
   const term = await deleteTerms(req.params.id);
+
   if (!term) {
     return res.status(httpStatus.NOT_FOUND).json(
       response({
@@ -77,6 +99,7 @@ const deleteTermsController = catchAsync(async (req, res) => {
       })
     );
   }
+
   res.status(httpStatus.OK).json(
     response({
       message: "Terms deleted successfully",
@@ -87,7 +110,7 @@ const deleteTermsController = catchAsync(async (req, res) => {
   );
 });
 
-// Client / Employ Get
+// Get (Client & Employ)
 const getTermsController = catchAsync(async (req, res) => {
   const terms = await getTerms();
   res.status(httpStatus.OK).json(
@@ -100,4 +123,9 @@ const getTermsController = catchAsync(async (req, res) => {
   );
 });
 
-module.exports = { createTerms,updateTermsController,deleteTermsController,getTermsController };
+module.exports = {
+  createTerms,
+  updateTermsController,
+  deleteTermsController,
+  getTermsController,
+};

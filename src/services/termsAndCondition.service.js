@@ -1,13 +1,17 @@
 const termsConditionsModel = require("../models/termsConditions.model");
 
-
-// create terms only admin
+// Create Terms Only If Not Exists
 const createTermsService = async (data) => {
+  const exists = await termsConditionsModel.findOne();
+  if (exists) {
+    return null; // Means already exists
+  }
+
   const task = await termsConditionsModel.create(data);
   return task;
 };
 
-//  Update
+// Update
 const updateTerms = async (id, data) => {
   const term = await termsConditionsModel.findByIdAndUpdate(id, data, {
     new: true,
@@ -16,18 +20,21 @@ const updateTerms = async (id, data) => {
   return term;
 };
 
-//  Delete
+// Delete
 const deleteTerms = async (id) => {
   const term = await termsConditionsModel.findByIdAndDelete(id);
   return term;
 };
 
-//  Get all (for client/employ)
+// Get all
 const getTerms = async () => {
   const terms = await termsConditionsModel.find().sort({ createdAt: -1 }).lean();
   return terms;
 };
 
 module.exports = {
-  createTermsService,updateTerms,deleteTerms,getTerms
+  createTermsService,
+  updateTerms,
+  deleteTerms,
+  getTerms,
 };
