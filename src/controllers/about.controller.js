@@ -1,10 +1,14 @@
 const httpStatus = require("http-status");
 const catchAsync = require("../utils/catchAsync");
 const response = require("../config/response");
-const { createAboutUs, updateAbout, deleteAbout, getAbout } = require("../services/about.service");
+const {
+  createAboutUs,
+  updateAbout,
+  deleteAbout,
+  getAbout,
+} = require("../services/about.service");
 
-
-// Only admin can create AboutUs
+// Admin Create (Only 1 time allowed)
 const createAboutController = catchAsync(async (req, res) => {
   if (req.user.role !== "admin") {
     return res.status(httpStatus.UNAUTHORIZED).json(
@@ -16,13 +20,24 @@ const createAboutController = catchAsync(async (req, res) => {
     );
   }
 
-  const about = await createAboutUs(req.body);
+  const created = await createAboutUs(req.body);
+
+  if (!created) {
+    return res.status(httpStatus.BAD_REQUEST).json(
+      response({
+        message: "About Us already exists, you can only update",
+        status: "FAIL",
+        statusCode: httpStatus.BAD_REQUEST,
+      })
+    );
+  }
+
   res.status(httpStatus.CREATED).json(
     response({
       message: "About Us created successfully",
       status: "OK",
       statusCode: httpStatus.CREATED,
-      data: about,
+      data: created,
     })
   );
 });
@@ -40,6 +55,7 @@ const updateAboutController = catchAsync(async (req, res) => {
   }
 
   const about = await updateAbout(req.params.id, req.body);
+
   if (!about) {
     return res.status(httpStatus.NOT_FOUND).json(
       response({
@@ -73,6 +89,7 @@ const deleteAboutController = catchAsync(async (req, res) => {
   }
 
   const about = await deleteAbout(req.params.id);
+
   if (!about) {
     return res.status(httpStatus.NOT_FOUND).json(
       response({
@@ -93,7 +110,7 @@ const deleteAboutController = catchAsync(async (req, res) => {
   );
 });
 
-// Get all (Client / Employee)
+// Get All
 const getAboutController = catchAsync(async (req, res) => {
   const about = await getAbout();
   res.status(httpStatus.OK).json(

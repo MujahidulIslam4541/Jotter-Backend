@@ -43,9 +43,9 @@ const getFolderTree = async (userId, parentId = null) => {
   return items;
 };
 
-// ======================
-// 📌 Calculate total used storage (Type Wise)
-// ======================
+
+//  Calculate total used storage 
+
 const getUserStorageUsage = async (userId) => {
   const items = await Storage.find({ createdBy: userId, isDeleted: false });
 

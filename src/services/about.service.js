@@ -1,13 +1,17 @@
 const { AboutUs } = require("../models");
 
-
-// create about only admin
+// Create AboutUs Only If Not Exists
 const createAboutUs = async (data) => {
+  const exists = await AboutUs.findOne();
+  if (exists) {
+    return null; // Already exists
+  }
+
   const about = await AboutUs.create(data);
   return about;
 };
 
-//  Update
+// Update
 const updateAbout = async (id, data) => {
   const about = await AboutUs.findByIdAndUpdate(id, data, {
     new: true,
@@ -16,18 +20,21 @@ const updateAbout = async (id, data) => {
   return about;
 };
 
-//  Delete
+// Delete
 const deleteAbout = async (id) => {
   const about = await AboutUs.findByIdAndDelete(id);
   return about;
 };
 
-//  Get all (for client/employ)
+// Get All
 const getAbout = async () => {
   const about = await AboutUs.find().sort({ createdAt: -1 }).lean();
   return about;
 };
 
 module.exports = {
-  createAboutUs,deleteAbout,updateAbout,getAbout
+  createAboutUs,
+  deleteAbout,
+  updateAbout,
+  getAbout,
 };
